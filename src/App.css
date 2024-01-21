@@ -1,0 +1,38 @@
+@font-face {
+  font-family: "Angelina";
+  src: url("./fonts/FreeVersionAngelina.ttf");
+}
+
+@font-face {
+  font-family: "NowBold";
+  src: url("./fonts/Now-Bold.otf");
+}
+
+@font-face {
+  font-family: "NowRegular";
+  src: url("./fonts/Now-Regular.otf");
+}
+
+@font-face {
+  font-family: "Rasputin";
+  src: url("./fonts/Rasputin.otf");
+}
+
+@layer-components {
+  .titulo {
+    @apply font-nowRegular md:text-2xl
+  }
+}
+
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #E6DAD1 #9D5A4D; 
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 2px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #2A282B; 
+}
