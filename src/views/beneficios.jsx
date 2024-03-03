@@ -44,14 +44,14 @@ const Beneficios = () => {
                 
                     
                     <div className="flex flex-row items-center justify-center gap-2 md:gap-5 px-6" style={{ backgroundImage: `url(${starsLong})` }}>
-                        <h1 className="font-nowBold uppercase text-marron z-[50] relative py-8 md:text-2xl">Hace que este dia especial sea:</h1><h1 className="font-angelina text-marron text-2xl md:text-5xl">inolvidable!</h1>
+                        <h1 className="font-nowBold uppercase text-marron z-[50] relative py-8 md:text-2xl">Hace que este dia especial sea:</h1><h1 className="font-angelina text-marron text-2xl md:text-4xl md:pb-3">inolvidable!</h1>
                     </div>                    
                 
 
                 <div className="bg-gradient-to-b from-celestito py-5 md:flex md:flex-row">
                     <div className="md:w-3/5">{/* contenedores de befeficios_Data*/}
                         {Beneficios_Data.map((benef, index) => (
-                            <div key={index} className="bg-celestito p-3 rounded-xl shadow-xl mb-5 mx-8 md:pl-3 md:p-0">
+                            <div key={index} className="bg-celestito rounded-xl shadow-xl mb-2 mx-8 md:pl-3 md:p-0">
                                 <div onClick={() => toggleText(index)} className="flex flex-row gap-2">
                                     <IoStar className="text-marron hover:animate-spin"/>
                                     <h2 className="font-nowBold uppercase text-base text-marron">{benef.titulo}</h2>
@@ -59,7 +59,7 @@ const Beneficios = () => {
                                 <p className={`font-rasputin text-marron ${showText === index ? "block" : "hidden"}`}>
                                     {benef.texto}
                                 </p>
-                                <button onClick={() => toggleText(index)} className="text-marron underline pt-2 md:pt-0">
+                                <button onClick={() => toggleText(index)} className="text-marron underline pt-2 md:pt-0 pl-6">
                                     {showText === index ? "ocultar" : "ver"}
                                 </button>
                             </div>

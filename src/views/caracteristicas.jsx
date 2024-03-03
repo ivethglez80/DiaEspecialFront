@@ -86,7 +86,7 @@ const Caracteristicas = () => {
     return (
         <>
             <div className="bg-cafecito pb-16">
-                <div className="flex justify-center pt-10 pb-5">
+                <div className="flex justify-center pt-10 pb-2">
                     <h1 className="font-now text-marron text-3xl uppercase">Que incluye tu invitacion web:</h1>
                 </div>
 

@@ -18,27 +18,35 @@ import logo from "./../img/logoDiaEspecial.png"
 const TodaOcasion = () =>{
     return (
         <>
-        <div className="bg-marron flex flex-col">
-            <div className="md:flex md:flex-row md:pt-10">
-            <div className="pl-4 py-4 md:w-2/5" style={{ backgroundImage: `url(${starsBrown})` }}>
-                <h1 className="font-now text-white text-2xl md:pl-20">CUALQUIERA SEA LA OCASION</h1>
-                <h1 className="font-now text-white text-2xl md:pl-20">ES TU</h1>                
-                <img src={logo} alt="" className="mx-auto py-2"/>
-                <h1 className="font-now text-white text-2xl pr-6 flex justify-end">HACE QUE SEA:</h1>
-                <h1 className="font-now text-white text-2xl pr-6 flex justify-end">INOLVIDABLE!</h1>
+        <div className="bg-[#9D5A4D] flex flex-col h-screen">
+            <div className="sm:flex sm:flex-row sm:pt-6">
+            <div className="pl-4 py-4 sm:w-2/5" style={{ backgroundImage: `url(${starsBrown})` }}>
+                <h1 className="font-now text-white text-2xl sm:pl-20">CUALQUIERA SEA LA OCASION</h1>
+                <h1 className="font-now text-white text-2xl sm:pl-20">ES TU</h1>                
+                <img src={logo} alt="" className="mx-auto py-2 sm:h-[100px]"/>
+                <h1 className="font-now text-white text-2xl pr-6 flex justify-center">HACE QUE SEA:</h1>
+                <h1 className="font-now text-white text-2xl pr-6 flex justify-end">INOLVIDABLE !</h1>
             </div>
-            <div className="hidden md:w-3/5 md:flex md:flex-wrap">
-                <img src={toda1} alt="" className="md:scale-90"/>
-                <img src={toda2} alt="" className="md:scale-90"/>
-                <img src={toda3} alt="" className="md:scale-90"/>
+            <div className="hidden sm:w-3/5 sm:flex sm:flex-nowrap sm:justify-around sm:pt-8">
+                <div className="sm:h-[195px] sm:w-[170px] overflow-hidden shadow-lg shadow-white">
+                <img src={toda1} alt="" className="object-cover"/>
+                </div>
+                <div className="sm:h-[195px] sm:w-[170px] overflow-hidden shadow-lg shadow-white">
+                <img src={toda2} alt="" className="object-cover"/>
+                </div>
+                <div className="sm:h-[195px] sm:w-[170px] overflow-hidden shadow-lg shadow-white">
+                <img src={toda3} alt="" className="object-cover"/>
+                </div>
                 
             </div>
             </div>
-        <div className="flex flex-wrap md:pb-10">
-            <img src={todaL1} alt="" className="w-1/2 md:w-1/4 md:scale-90"/>
-            <img src={todaL2} alt="" className="w-1/2 md:w-1/4 md:scale-90"/>
-            <img src={todaL3} alt="" className="w-1/2 md:w-1/4 md:scale-90"/>
-            <img src={todaL4} alt="" className="w-1/2 md:w-1/4 md:scale-90"/>            
+
+
+        <div className="flex flex-wrap sm:justify-around">
+            <img src={todaL1} alt="" className="w-1/2 sm:w-1/5 sm:h-[170px] shadow-lg shadow-white"/>
+            <img src={todaL2} alt="" className="w-1/2 sm:w-1/5 sm:h-[170px] shadow-lg shadow-white"/>
+            <img src={todaL3} alt="" className="w-1/2 sm:w-1/5 sm:h-[170px] shadow-lg shadow-white"/>
+            <img src={todaL4} alt="" className="w-1/2 sm:w-1/5 sm:h-[170px] shadow-lg shadow-white"/>            
         </div>
         </div>
         </>

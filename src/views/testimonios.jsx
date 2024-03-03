@@ -30,12 +30,12 @@ const Testimonios = () =>{
     return (
         <>
         <div className="my-20">
-        <h1 className="pl-5 font-now text-marron text-3xl uppercase">Testimonios</h1>
-        <div className="flex flex-nowrap overflow-x-auto py-5 custom-scrollbar ">
+        <h1 className="pl-5 font-now text-marron text-2xl uppercase">Testimonios</h1>
+        <div className="flex flex-nowrap overflow-x-auto py-10 custom-scrollbar ">
         {testimonio_Data.map((testimonio, index)=>(
-            <div className="h-[200px] p-5 bg-marron mx-5 rounded-3xl">
-                <p className="font-rasputin text-white w-[200px]">{testimonio.texto}</p>
-                <h3 className="font-now text-white flex justify-end">{testimonio.nombre}</h3>
+            <div className="h-[150px] p-5 bg-cafecito mx-5 rounded-3xl hover:shadow-lg">
+                <p className="font-rasputin text-marron w-[200px]">{testimonio.texto}</p>
+                <h3 className="font-now text-marron flex justify-end">{testimonio.nombre}</h3>
             </div>
         ))}
         </div>

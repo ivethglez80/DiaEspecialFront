@@ -11,15 +11,15 @@ const Contacto = () =>{
     return (
         <>
         <div id="contacto_section" className="bg-cafecito">
-        <div className="bg-celestito my-8 md:flex md:flex-row md:justify-evenly">
+        <div className="bg-celestito my-8 md:flex md:flex-row md:justify-evenly md:h-[420px]">
             <div>
                 <ContactForm />
             </div>
             <div>
-                <img src={divisor} alt="" className="px-5 pb-10 md:hidden block"/>
-                <img src={divisorV} alt="" className="py-5 hidden md:block"/>
+                <img src={divisor} alt="" className="px-5 py-6 md:hidden block"/>
+                <img src={divisorV} alt="" className="py-0 md:h-5/6 md:pt-16 hidden md:block"/>
             </div>
-            <div className="md:pt-36">
+            <div className="md:pt-24">
                 <div className="flex flex-row justify-center items-center pb-5">
                 <PiWhatsappLogoFill className="text-marron text-5xl"/>
                 <p className="font-rasputin text-marron text-xl">Envianos tu consulta.</p>
@@ -37,7 +37,7 @@ const Contacto = () =>{
 
                 <div className="flex justify-center pb-5">
             <Link to={"/catalogo"}>
-                <button className="font-now text-marron bg-white rounded-3xl py-2 px-6">IR AL CATALOGO</button>
+                <button className="bg-marron hover:bg-cafe2 hover:text-marron font-now text-white uppercase px-4 rounded-lg md:text-lg">IR AL CATALOGO</button>
             </Link>
             </div>
 

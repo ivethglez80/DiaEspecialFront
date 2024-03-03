@@ -13,11 +13,11 @@ export default {
             rasputin : ["Rasputin", "Sans-serif"]
         },
         colors:{
-            marron: "#9D5A4D",
-            celestito: "#BFCBD8",
+            marron: "#674470",
+            celestito: "#F4E1FF",
             cafecito: "#E6DAD1", 
-            cafe1: "#F1D9CA",          
-            cafe2:"#DBC8BC"
+            cafe1: "#E8EBF6",          
+            cafe2:"#FFEEF2"
         }
       },
     },

@@ -11,11 +11,11 @@ const catalogo_Imgs = [sample1, sample2, sample3, sample4, sample5, sample6];
 const CatalogoSample = () =>{
     return (
         <>
-        <div className="bg-marron pb-16">
-            <div className="flex justify-center pt-16 pb-6">
-                <h1 className="font-now text-white text-3xl uppercase">Algunos modelos:</h1>
+        <div className="bg-gradient-to-t from-marron pb-6">
+            <div className="flex justify-center pt-4 pb-4">
+                <h1 className="font-now text-marron text-3xl uppercase">Algunos modelos:</h1>
             </div>
-            <div className="flex flex-nowrap overflow-x-auto custom-scrollbar gap-10 mx-5 py-5">
+            <div className="flex flex-nowrap overflow-x-auto custom-scrollbar gap-10 mx-5 py-2">
                 <img src={sample1}/>
                 <img src={sample2}/>
                 <img src={sample3}/>
@@ -23,9 +23,9 @@ const CatalogoSample = () =>{
                 <img src={sample5}/>
                 <img src={sample6}/>
             </div>
-            <div className="flex justify-center pt-10">
+            <div className="flex justify-center pt-6">
             <Link to={"/catalogo"}>
-                <button className="font-now text-marron bg-white rounded-3xl py-2 px-6">IR AL CATALOGO</button>
+                <button className="font-now text-marron bg-white hover:bg-cafecito rounded-3xl py-2 px-6">IR AL CATALOGO</button>
             </Link>
             </div>
         </div>        
