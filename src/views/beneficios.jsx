@@ -51,7 +51,7 @@ const Beneficios = () => {
                 <div className="bg-gradient-to-b from-celestito py-5 md:flex md:flex-row">
                     <div className="md:w-3/5">{/* contenedores de befeficios_Data*/}
                         {Beneficios_Data.map((benef, index) => (
-                            <div key={index} className="bg-celestito rounded-xl shadow-xl mb-2 mx-8 md:pl-3 md:p-0">
+                            <div key={index} className="bg-celestito hover:bg-pink-50 rounded-xl shadow-xl mb-2 mx-8 md:pl-3 md:p-0">
                                 <div onClick={() => toggleText(index)} className="flex flex-row gap-2">
                                     <IoStar className="text-marron hover:animate-spin"/>
                                     <h2 className="font-nowBold uppercase text-base text-marron">{benef.titulo}</h2>

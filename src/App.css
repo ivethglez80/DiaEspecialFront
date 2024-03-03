@@ -24,15 +24,4 @@
   }
 }
 
-.custom-scrollbar {
-  scrollbar-width: thin;
-  scrollbar-color: #E6DAD1 #eac5ff; 
-}
 
-.custom-scrollbar::-webkit-scrollbar {
-  width: 2px;
-}
-
-.custom-scrollbar::-webkit-scrollbar-thumb {
-  background-color: #a885bd; 
-}

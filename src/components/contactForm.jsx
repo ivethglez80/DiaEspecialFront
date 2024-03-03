@@ -67,36 +67,36 @@ const handleSubmit = async(e) => {
     return (
         <>
         <div>
-            <h1 className="font-now text-marron uppercase text-lg pl-10 pt-6">Envianos tu consulta:</h1>
+            <h1 className="font-now text-[#9D5A4D] uppercase text-lg pl-10 pt-6">Envianos tu consulta:</h1>
             <form onSubmit={handleSubmit}>
 
                 <div className="flex flex-col px-10 pt-2 md:px-0">
-                    <label className="font-rasputin text-marron">nombre</label>
-                    <input type="text" name="nombre" value={state.nombre} onChange={handleInput} className="rounded-sm shadow-md text-marron"/>
+                    <label className="font-rasputin text-[#9D5A4D]">nombre</label>
+                    <input type="text" name="nombre" value={state.nombre} onChange={handleInput} className="rounded-sm shadow-md text-[#9D5A4D]"/>
                 </div>
 
                 <div className="flex flex-col px-10 pt-2 md:px-0">
-                    <label className="font-rasputin text-marron">apellido</label>
-                    <input type="text" name="apellido" value={state.apellido} onChange={handleInput} className="rounded-sm shadow-md text-marron"/>
+                    <label className="font-rasputin text-[#9D5A4D]">apellido</label>
+                    <input type="text" name="apellido" value={state.apellido} onChange={handleInput} className="rounded-sm shadow-md text-[#9D5A4D]"/>
                 </div>
 
                 <div className="flex flex-col px-10 pt-2 md:px-0">
-                    <label className="font-rasputin text-marron">email</label>
-                    <input type="email" name="email" value={state.email} onChange={handleInput} className="rounded-sm shadow-md text-marron"/>
+                    <label className="font-rasputin text-[#9D5A4D]">email</label>
+                    <input type="email" name="email" value={state.email} onChange={handleInput} className="rounded-sm shadow-md text-[#9D5A4D]"/>
                 </div>
 
                 <div className="flex flex-col px-10 pt-2 md:px-0">
-                    <label className="font-rasputin text-marron">whatsapp</label>
-                    <input type="number" name="whatsapp" value={state.whatsapp} onChange={handleInput} className="rounded-sm shadow-md text-marron"/>
+                    <label className="font-rasputin text-[#9D5A4D]">whatsapp</label>
+                    <input type="number" name="whatsapp" value={state.whatsapp} onChange={handleInput} className="rounded-sm shadow-md text-[#9D5A4D]"/>
                 </div>
 
                 <div className="flex flex-col px-10 pt-2 md:px-0">
-                    <label className="font-rasputin text-marron">consulta</label>
-                    <textarea name="consulta" value={state.consulta} onChange={handleInput} className="rounded-sm shadow-md text-marron"/>
+                    <label className="font-rasputin text-[#9D5A4D]">consulta</label>
+                    <textarea name="consulta" value={state.consulta} onChange={handleInput} className="rounded-sm shadow-md text-[#9D5A4D]"/>
                 </div>
 
                 <div className="flex justify-end pr-10 pt-5 md:pr-0">
-                    <button type="submit" className="bg-marron hover:bg-cafe2 hover:text-marron font-now text-white uppercase px-4 rounded-lg md:text-lg">Enviar</button>
+                    <button type="submit" className="bg-[#9D5A4D] hover:bg-cafe2 hover:text-[#9D5A4D] font-now text-white uppercase px-4 rounded-lg md:text-lg hover:border hover:border-[#9D5A4D]">Enviar</button>
                 </div>
 
             </form>

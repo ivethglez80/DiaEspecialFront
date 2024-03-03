@@ -25,7 +25,7 @@ const CatalogoSample = () =>{
             </div>
             <div className="flex justify-center pt-6">
             <Link to={"/catalogo"}>
-                <button className="font-now text-marron bg-white hover:bg-cafecito rounded-3xl py-2 px-6">IR AL CATALOGO</button>
+                <button className="font-now text-marron bg-white hover:bg-cafecito rounded-3xl py-2 px-6 hover:shadow-md hover:shadow-white">IR AL CATALOGO</button>
             </Link>
             </div>
         </div>        
