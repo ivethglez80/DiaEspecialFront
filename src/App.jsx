@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import FrontStore from './views/frontStore'
 
 import './App.css'
-import CatalogoFull from './views/catalogoFull'
+import CatalogoFull from './views/catalogo/catalogoFull'
 
 function App() {
   
