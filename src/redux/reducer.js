@@ -16,11 +16,16 @@ const rootReducer = (state = initialState, action) => {
             const tipo = action.payload;
             let catalogoFiltrado = [];
 
-            if (tipo === 'todos') {
+            if (tipo === 'Todos') {
                 catalogoFiltrado = catalogoFull;
             } else {
-                catalogoFiltrado = catalogoFull
+                catalogoFiltrado = catalogoFull.filter(item => item.tipo === tipo);
             }
+            return {
+                ...state,
+                catalogoFiltrado,
+                tipoFiltro: tipo
+            };
 
         default:
             return {...state};
