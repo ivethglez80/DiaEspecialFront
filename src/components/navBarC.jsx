@@ -1,12 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { getCatalogo } from "./../redux/actions";
 import { IoIosArrowDropdownCircle } from "react-icons/io";
 import { IoIosArrowDropupCircle } from "react-icons/io";
+import { useDispatch, useSelector } from "react-redux";
+import ModeloCard from "./Cards/modeloCard";
 
 
 
 
-const NavBarC = () => {
+const NavBarC = () => {    
 
     const [ocasionOpen, setOcasionOpen] = useState(false);
 
@@ -79,13 +82,12 @@ const NavBarC = () => {
                             <li className="font-fuente4 text-[#9D5A4D] text-center hover:text-white" onClick={toggleTipo}>Silver</li>
                             <li className="font-fuente4 text-[#9D5A4D] text-center hover:text-white" onClick={toggleTipo}>Basica</li>                            
                         </ul>
-                    </div>
-
-
+                    </div>                    
 
                 </div>
-
+                               
             </div>
+
         </>
     )
 };

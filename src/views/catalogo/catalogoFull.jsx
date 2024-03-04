@@ -3,6 +3,7 @@ import NavBarC from "../../components/navBarC";
 import bgGray from "./../../img/bgCatalogueGray.png";
 import Footer from "./../../components/footer";
 import NavCatalogo from "./../../components/navCatalogo";
+import CardsContainer from "./cardsContainer";
 
 
 const CatalogoFull = () =>{
@@ -14,6 +15,10 @@ const CatalogoFull = () =>{
                 <img src={bgGray} alt="backgroudn roses gray" className="absolute top-0 left-0 object-cover"/>
                 <div className="relative pt-20">
                 <NavCatalogo />
+                </div>
+
+                <div className="relative">
+                    <CardsContainer />
                 </div>
             </div>        
         </div>
