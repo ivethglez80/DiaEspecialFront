@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import ModeloCard from "../../components/Cards/modeloCard";
-import { getCatalogo } from "../../redux/actions"; 
+import { getCatalogo, filtertipo } from "../../redux/actions"; 
 
 
 const CardsContainer = () => {
