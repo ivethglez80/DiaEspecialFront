@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { getCatalogo } from "./../redux/actions";
 import { IoIosArrowDropdownCircle } from "react-icons/io";
 import { IoIosArrowDropupCircle } from "react-icons/io";
 import { useDispatch, useSelector } from "react-redux";
 import ModeloCard from "./Cards/modeloCard";
-import { filtertipo } from "./../redux/actions";
+import { filtertipo, filterOcasion } from "./../redux/actions";
 
 
 
@@ -14,19 +13,28 @@ const NavBarC = () => {
     
     const dispatch = useDispatch();
 
-    const handleFilterChange = (tipo) => {
+    const handleTipoChange = (tipo) => {
         dispatch (filtertipo(tipo)); 
-        console.log("tipo:", tipo);       
+        console.log("tipo:", tipo);  
+        toggleTipo();  
+        setTipoNombre(tipo);   
     };
 
-    const [ocasionOpen, setOcasionOpen] = useState(false);
+    const handleOcasionChange = (ocasion) => {
+        dispatch (filterOcasion(ocasion));
+        console.log("ocasion:", ocasion);
+        toggleOcasion();
+        setOcasionNombre(ocasion);
+    }
 
+    const [ocasionOpen, setOcasionOpen] = useState(false);
+    const [ocasionNombre, setOcasionNombre] = useState ("Todos");
     const toggleOcasion = () => {
         setOcasionOpen(!ocasionOpen)
     };
 
     const [tipoOpen, setTipoOpen] = useState(false);
-
+    const [tipoNombre, setTipoNombre] =  useState("Todos");
     const toggleTipo = () => {
         setTipoOpen(!tipoOpen)
     };
@@ -60,20 +68,21 @@ const NavBarC = () => {
                                 OCASION <IoIosArrowDropdownCircle />
                             </h1>
                         )}
-
+                        <p className="font-Rasputin text-[#9D5A4D]">{ocasionNombre}</p>
                         <ul className={`absolute bg-cafecito px-2 py-2 rounded-b-xl shadow-lg shadow-gray-300
                                       ${ocasionOpen ? "opacity-100 z-10" : "opacity-0 z-[-1]"} transition duration-300 ease-in-out`}>
-                            <li className="font-fuente4 text-[#9D5A4D] text-center hover:text-white" onClick={toggleOcasion}>Todos</li>
-                            <li className="font-fuente4 text-[#9D5A4D] text-center hover:text-white" onClick={toggleOcasion}>Boda</li>
-                            <li className="font-fuente4 text-[#9D5A4D] text-center hover:text-white" onClick={toggleOcasion}>Quinceañera</li>
-                            <li className="font-fuente4 text-[#9D5A4D] text-center hover:text-white" onClick={toggleOcasion}>Dulces 16</li>
-                            <li className="font-fuente4 text-[#9D5A4D] text-center hover:text-white" onClick={toggleOcasion}>Infantil</li>
-                            <li className="font-fuente4 text-[#9D5A4D] text-center hover:text-white" onClick={toggleOcasion}>Cumpleaños</li>
-                            <li className="font-fuente4 text-[#9D5A4D] text-center hover:text-white" onClick={toggleOcasion}>Otros</li>
+                            <li className="font-fuente4 text-[#9D5A4D] text-center hover:text-white" onClick={()=>handleOcasionChange('Todos')}>Todos</li>
+                            <li className="font-fuente4 text-[#9D5A4D] text-center hover:text-white" onClick={()=>handleOcasionChange('Boda')}>Boda</li>
+                            <li className="font-fuente4 text-[#9D5A4D] text-center hover:text-white" onClick={()=>handleOcasionChange('Quince')}>Quinceañera</li>
+                            <li className="font-fuente4 text-[#9D5A4D] text-center hover:text-white" onClick={()=>handleOcasionChange('Dulces')}>Dulces 16</li>
+                            <li className="font-fuente4 text-[#9D5A4D] text-center hover:text-white" onClick={()=>handleOcasionChange('Infantil')}>Infantil</li>
+                            <li className="font-fuente4 text-[#9D5A4D] text-center hover:text-white" onClick={()=>handleOcasionChange('Cumple')}>Cumpleaños</li>
+                            <li className="font-fuente4 text-[#9D5A4D] text-center hover:text-white" onClick={()=>handleOcasionChange('Otros')}>Otros</li>
                         </ul>
                     </div>
 
                     <div>
+                        
                         {tipoOpen ? (
                             <h1 className="font-nowRegular md:text-base hover:text-[#9D5A4D] text-white flex flex-row items-center gap-1" onClick={toggleTipo}>
                                 cerrar <IoIosArrowDropupCircle />
@@ -83,13 +92,13 @@ const NavBarC = () => {
                                 TIPO <IoIosArrowDropdownCircle />
                             </h1>
                         )}
-
+                        <p className="font-Rasputin text-[#9D5A4D]">{tipoNombre}</p>
                         <ul className={`absolute bg-cafecito px-2 py-2 rounded-b-xl shadow-lg shadow-gray-300
                                       ${tipoOpen ? "opacity-100 z-10" : "opacity-0 z-[-1]"} transition duration-300 ease-in-out`}>
-                            <li className="font-fuente4 text-[#9D5A4D] text-center hover:text-white" onClick={()=>handleFilterChange('Todos')}>Todos</li>
-                            <li className="font-fuente4 text-[#9D5A4D] text-center hover:text-white" onClick={()=>handleFilterChange('Gold')}>Gold</li>
-                            <li className="font-fuente4 text-[#9D5A4D] text-center hover:text-white" onClick={()=>handleFilterChange('Silver')}>Silver</li>
-                            <li className="font-fuente4 text-[#9D5A4D] text-center hover:text-white" onClick={()=>handleFilterChange('Basica')}>Basica</li>                            
+                            <li className="font-fuente4 text-[#9D5A4D] text-center hover:text-white" onClick={()=>handleTipoChange('Todos')}>Todos</li>
+                            <li className="font-fuente4 text-[#9D5A4D] text-center hover:text-white" onClick={()=>handleTipoChange('Gold')}>Gold</li>
+                            <li className="font-fuente4 text-[#9D5A4D] text-center hover:text-white" onClick={()=>handleTipoChange('Silver')}>Silver</li>
+                            <li className="font-fuente4 text-[#9D5A4D] text-center hover:text-white" onClick={()=>handleTipoChange('Basica')}>Basica</li>                            
                         </ul>
                     </div>                    
 

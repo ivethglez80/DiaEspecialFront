@@ -9,20 +9,24 @@ import CardsContainer from "./cardsContainer";
 const CatalogoFull = () =>{
     return (
         <>
-        <NavBarC />
         <div className="h-screen">
+        <NavBarC />
             <div className="relative h-screen overflow-hidden">
-                <img src={bgGray} alt="backgroudn roses gray" className="absolute top-0 left-0 object-cover"/>
-                <div className="relative pt-20">
+                <img src={bgGray} alt="backgroudn roses gray" className="absolute object-cover top-0 left-0"/>
+                <div className="relative pt-10">
                 <NavCatalogo />
                 </div>
 
-                <div className="relative">
+                <div className="relative flex justify-center">
+                <div className="h-[370px] overflow-y-auto sm:w-11/12">
                     <CardsContainer />
                 </div>
+                </div>
+                
+                
             </div>        
+        <Footer/>
         </div>
-        <Footer />
         </>
     )
 }

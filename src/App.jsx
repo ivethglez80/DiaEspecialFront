@@ -5,6 +5,7 @@ import { Provider } from 'react-redux'
 import store from './redux/store'
 import './App.css'
 import CatalogoFull from './views/catalogo/catalogoFull'
+import Ordenar from './views/ordenar/ordenar'
 
 function App() {
   
@@ -17,6 +18,7 @@ function App() {
       <Routes>
       <Route path="/" element={<FrontStore />} />
       <Route path="/catalogo" element ={<CatalogoFull />} />
+      <Route path="/catalogo/:id" element={<Ordenar />} />
       </Routes>
      </BrowserRouter>
 

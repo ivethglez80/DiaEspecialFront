@@ -6,20 +6,25 @@ import { getCatalogo, filtertipo } from "../../redux/actions";
 
 const CardsContainer = () => {
 
-        const dispatch = useDispatch();
+        const dispatch = useDispatch();        
 
         useEffect(()=>{
             dispatch(getCatalogo());
+            dispatch(filtertipo());
         }, [dispatch]);
     
         const catalogoFull = useSelector(state => state.catalogoFull);
+        const catalogoFiltrado = useSelector(state => state.catalogoFiltrado); 
+        // const catalogoToRender = catalogoFiltrado.length > 0 ? catalogoFiltrado : catalogoFull;      
         console.log("este es el catalogo:", catalogoFull);
+        console.log("este es el filtrado:", typeof( catalogoFiltrado));
 
     return (
-        <>
-        <div className=" h-3/4 overflow-y-auto custom-scrollbar">
-                    {catalogoFull.map(({id, imagen, nombre_modelo, ocasion, tipo, urlSample}) => {
+        <>        
+        <div className="pb-10 flex flex-row flex-wrap gap-10 justify-evenly">
+                    {catalogoFiltrado.length>0?(catalogoFiltrado.map(({id, imagen, nombre_modelo, ocasion, tipo, urlSample}) => {
                         return (
+                            <>                            
                             <div>
                             <ModeloCard 
                             id={id}
@@ -30,8 +35,11 @@ const CardsContainer = () => {
                             urlSample = {urlSample}
                             />
                             </div>
+                            </>
                         )
-                    })}
+                    })):(
+                        <p className="text-red-500">No se han encontrado modelos con esas caracteristicas, por favor elija otras opciones</p>
+                    )}
                 </div>
         </>
     )
