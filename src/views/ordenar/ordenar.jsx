@@ -31,7 +31,7 @@ const Ordenar = () => {
                 <img src={bgRose} alt="backgroudn roses gray" className="absolute object-cover top-0 left-0" />
                 <div className="flex flex-row">
                     <div className="pl-16">
-                        <p className="relative text-[#9D5A4D] pt-10">Felicitaciones! Has elegido:</p>
+                        <p className="relative text-[#9D5A4D] pt-10 text-center">Felicitaciones! <br/> Has elegido:</p>
                         <div className="relative w-[166px] h-[309px] rounded-3xl overflow-hidden flex justify-center">
                             <img
                                 src={modSeleccionado.urlSample ? modSeleccionado.urlSample : prueba}
