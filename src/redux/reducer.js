@@ -45,6 +45,7 @@ const rootReducer = (state = initialState, action) => {
         case SELECTED_MOD : {
             const { catalogoFull } = state;
             let seleccionado = catalogoFull.find(item => item.id === action.payload);
+            console.log("catalogoFull:", catalogoFull);
             if (!seleccionado){
                 console.log("no hay tal modelo con esed id");
                 return state;
@@ -52,7 +53,7 @@ const rootReducer = (state = initialState, action) => {
                 
             return {
                 ...state, 
-                selected: seleccionado
+                selected: {...seleccionado}
             }
         }
         }
