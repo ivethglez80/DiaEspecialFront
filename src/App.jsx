@@ -6,6 +6,11 @@ import store from './redux/store'
 import './App.css'
 import DashLogin from './views/DashAdmin/dashLogin'
 import CatalogoRouter from './components/catalogoRouter'
+import CatalogoFull from './views/catalogo/catalogoFull'
+import Ordenar from './views/ordenar/ordenar'
+import DashAdmin from './views/DashAdmin/dashAdmin'
+import ModificaModelo from './views/DashAdmin/modificaModelo'
+import PrivateRoute from './views/DashAdmin/privateRoute'
 
 
 function App() {
@@ -16,11 +21,16 @@ function App() {
       <Provider store={store}>
 
         <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<FrontStore />} />
-            <Route path="/catalogo" element={<CatalogoRouter />} />
-            <Route path="/login" element={<DashLogin />} />
-          </Routes>
+        <Routes>
+      <Route path="/" element={<FrontStore />} />
+      <Route path="/catalogo" element ={<CatalogoFull />} />
+      <Route path="/catalogo/:id" element={<Ordenar />} />
+
+      <Route path="/login" element={<DashLogin />} />
+      <Route path="/admin" element={<PrivateRoute element={ DashAdmin } />} />
+      <Route path="/admin/:id" element={<PrivateRoute element={ModificaModelo} />} />
+
+      </Routes>
         </BrowserRouter>
 
       </Provider>

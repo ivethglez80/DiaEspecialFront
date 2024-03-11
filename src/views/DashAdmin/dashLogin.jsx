@@ -25,7 +25,7 @@ const DashLogin = () => {
 
     return (
         <>
-        <div className="flex justify-center pt-40">
+        <div className="flex justify-center pt-40 bg-gray-600">
         <div className="flex flex-col">
             <div className="pb-6">
                 <h1 className="font-fuente1 text-color1 text-2xl uppercase text-center">Ingresar a <br/> panel de control</h1>

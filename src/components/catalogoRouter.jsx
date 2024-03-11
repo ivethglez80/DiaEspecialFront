@@ -1,3 +1,4 @@
+import { Routes, Route } from 'react-router-dom'
 import CatalogoFull from "../views/catalogo/catalogoFull";
 import Ordenar from "../views/ordenar/ordenar";
 import DashAdmin from "../views/DashAdmin/dashAdmin";
