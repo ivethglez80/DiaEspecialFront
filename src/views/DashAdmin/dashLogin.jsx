@@ -1,25 +1,35 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom"
-
-
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 const DashLogin = () => {
     const [userName, setUserName] = useState('');
     const [password, setPassword] = useState('');
     const navigate = useNavigate();
     
+    useEffect(() => {
+        // Limpia el token del usuario al cerrar la ventana del navegador
+        window.addEventListener("beforeunload", handleBeforeUnload);
+        return () => {
+            window.removeEventListener("beforeunload", handleBeforeUnload);
+        };
+    }, []);
+
+    const handleBeforeUnload = () => {
+        localStorage.removeItem('userToken');
+    };
+
     const handleDashLogin = async () => {
         const verifiedUser = import.meta.env.VITE_USER;
         const verifiedPassword = import.meta.env.VITE_PASSWORD;
 
-        if ( userName === verifiedUser && password === verifiedPassword){
+        if (userName === verifiedUser && password === verifiedPassword) {
             const userToken = 'tokenOk'
             localStorage.setItem('userToken', userToken);            
             navigate('/admin');
-        }else{
+        } else {
             setUserName("");
             setPassword("");
-            alert ("Credenciales incorrectas");
+            alert("Credenciales incorrectas");
         }
     };
 
@@ -44,8 +54,7 @@ const DashLogin = () => {
         </div>
         </div>
         </>
-    )
-
-}
+    );
+};
 
 export default DashLogin;
