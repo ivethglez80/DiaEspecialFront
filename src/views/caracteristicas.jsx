@@ -182,7 +182,7 @@ const Caracteristicas = () => {
                                 <h2 className="flex justify-center uppercase font-now text-marron text-center">{caract.titulo}</h2>
                                 </div>
                             ) : (
-                                <p className="text-center font-rasputin text-marron p-2">{caract.texto}</p>
+                                <p className="text-center font-rasputin text-marron p-2 text-sm md:text-base">{caract.texto}</p>
                             )}
                         </div>
                     ))}

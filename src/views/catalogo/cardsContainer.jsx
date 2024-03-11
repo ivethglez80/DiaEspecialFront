@@ -20,7 +20,7 @@ const CardsContainer = () => {
         console.log("este es el filtrado:", typeof( catalogoFiltrado));
 
     return (
-        <>        
+        <>                    
         <div className="pb-10 flex flex-row flex-wrap gap-10 justify-evenly">
                     {catalogoFiltrado.length>0?(catalogoFiltrado.map(({id, imagen, nombre_modelo, ocasion, tipo, urlSample}) => {
                         return (

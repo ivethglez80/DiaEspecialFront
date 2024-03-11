@@ -5,7 +5,9 @@ import "react-datepicker/dist/react-datepicker.css";
 
 
 
-const OrderForm = () => {
+const OrderForm = ({modelo}) => {
+
+    console.log("modelos es,", modelo);
 
     const [state, setState] = useState({
         nombre: "",
@@ -22,7 +24,8 @@ const OrderForm = () => {
         dresscode: "",
         bancoNombre: "",
         alias: "",
-        cbu: ""
+        cbu: "",
+        modelo:modelo,
     })
 
     const baseUrl = import.meta.env.VITE_BASE_URL || "http://localhost:3001"; // con vite
@@ -43,10 +46,11 @@ const OrderForm = () => {
             dresscode: state.dresscode,
             bancoNombre: state.bancoNombre,
             alias: state.alias,
-            cbu: state.cbu
+            cbu: state.cbu,
+            modelo: modelo
         }
 
-        const res = await fetch(`${baseUrl}/sendEmail`, {
+        const res = await fetch(`${baseUrl}/send-email`, {
             method: "POST",
             body: JSON.stringify(dataSend),
             headers: {
@@ -78,7 +82,8 @@ const OrderForm = () => {
             dresscode: "",
             bancoNombre: "",
             alias: "",
-            cbu: ""
+            cbu: "", 
+            modelo:""
         });
     }
 
@@ -100,7 +105,7 @@ const OrderForm = () => {
 
     return (
         <>
-            <div className="pr-24">
+            <div className="pr-4">
                 <h1 className="font-now text-[#9D5A4D] uppercase text-lg pt-6">Formulario</h1>
                 <form onSubmit={handleSubmit}>
 
@@ -136,7 +141,7 @@ const OrderForm = () => {
                         <input type="text" name="novio" value={state.novio} onChange={handleInput} className="rounded-sm shadow-md text-[#9D5A4D]" />
                     </div>
 
-                    <div className="flex flex-row gap-4">
+                    <div className="flex flex-col md:flex-row gap-4">
                         <div className="w-1/2 flex flex-col pt-2 md:px-0">
                             <label className="font-rasputin text-[#9D5A4D]">Fecha del evento</label>
                             <DatePicker

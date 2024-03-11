@@ -7,9 +7,9 @@ import IncluyeBasica from "./incluyeBasica";
 
 
 
-const ModeloInfo = ({ocasion, tipo}) => {
+const ModeloInfo = ({ocasion, tipo, modelo}) => {
 
-    console.log("ocasion y tipo:", ocasion, tipo);
+    console.log("ocasion y tipo:", ocasion, tipo, modelo);
    
 
     let precioARS;
@@ -24,6 +24,9 @@ const ModeloInfo = ({ocasion, tipo}) => {
     }else if(tipo==="Basica"){
         precioARS = Config.PriceBasicaPromo;
         precioUSD = Config.PriceBasicaUSD;
+    }else if(tipo==="personalizado"){
+        precioARS = Config.PricePersonalizadaPromo;
+        precioUSD = Config.PricePersonalizadaUSD;
     }
 
     const [precio, setPrecio] = useState(false);
@@ -34,7 +37,7 @@ const ModeloInfo = ({ocasion, tipo}) => {
 
     return (
         <>
-            <div className="text-[#9D5A4D]">
+            <div className="text-[#9D5A4D] pr-8">
                 <h3 className="font-rasputin text-xs">INVITACIONES DIA ESPECIAL</h3>
                 <h2 className="font-rasputin uppercase text-2xl">Modelo ocasion: {ocasion} <br/> tipo: {tipo} </h2>
                 <div className="flex flex-row gap-4">
@@ -58,7 +61,7 @@ const ModeloInfo = ({ocasion, tipo}) => {
                 </div>
 
                 <div className="relative">
-                    <OrderForm />
+                    <OrderForm modelo={modelo}/>
                 </div>
 
                 <p className="text-sm font-bold ">Tiempo de entrega:</p>
@@ -70,6 +73,7 @@ const ModeloInfo = ({ocasion, tipo}) => {
                 {tipo === "Gold" && <IncluyeGold />}
                 {tipo === "Silver" && <IncluyeSilver />}
                 {tipo && "Basica" && <IncluyeBasica />}
+                {tipo === "personalizado" && <IncluyeGold />}
                 
                 </div>
             </div>

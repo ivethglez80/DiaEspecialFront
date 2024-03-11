@@ -3,7 +3,7 @@
 const Politicas = () => {
     return (
         <>
-            <div>
+            <div className="text-[#9D5A4D]">
                 <h2 className="font-bold">Forma de pago</h2>
                 <ul className="list-disc pl-10">
                     <li className="text-xs">50% al ordenar</li>

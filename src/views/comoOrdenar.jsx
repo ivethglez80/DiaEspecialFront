@@ -15,7 +15,7 @@ const ComoOrdenar = () =>{
         <>
         <div className="bg-celestito md:pt-10">
             <div className="flex justify-center">
-                <h1 className="font-now text-marron text-3xl uppercase px-5">ORDENAR TU INVITACION ES MUY FACIL:</h1>
+                <h1 className="font-now text-marron text-xl md:text-3xl uppercase px-5">ORDENAR TU INVITACION ES MUY FACIL:</h1>
             </div>
 
 
