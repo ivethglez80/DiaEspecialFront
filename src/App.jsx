@@ -4,25 +4,26 @@ import FrontStore from './views/frontStore'
 import { Provider } from 'react-redux'
 import store from './redux/store'
 import './App.css'
-import CatalogoFull from './views/catalogo/catalogoFull'
-import Ordenar from './views/ordenar/ordenar'
+import DashLogin from './views/DashAdmin/dashLogin'
+import CatalogoRouter from './components/catalogoRouter'
+
 
 function App() {
-  
+
 
   return (
     <>
-    <Provider store={store}>
+      <Provider store={store}>
 
-     <BrowserRouter>
-      <Routes>
-      <Route path="/" element={<FrontStore />} />
-      <Route path="/catalogo" element ={<CatalogoFull />} />
-      <Route path="/catalogo/:id" element={<Ordenar />} />
-      </Routes>
-     </BrowserRouter>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<FrontStore />} />
+            <Route path="/catalogo" element={<CatalogoRouter />} />
+            <Route path="/login" element={<DashLogin />} />
+          </Routes>
+        </BrowserRouter>
 
-    </Provider>
+      </Provider>
     </>
   )
 }

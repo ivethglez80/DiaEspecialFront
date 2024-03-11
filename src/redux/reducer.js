@@ -13,34 +13,39 @@ const rootReducer = (state = initialState, action) => {
         case GET_CATALOGO:
             return { ...state, catalogoFull: action.payload, catalogoFiltrado: action.payload };
 
-        case FILTER_TIPO:
-        case FILTER_OCASION: {
-            // Extrae los valores actuales necesarios del estado
-            const { catalogoFull, tipoFiltro, tipoOcasion } = state;
-            let nuevoTipoFiltro = tipoFiltro;
-            let nuevoTipoOcasion = tipoOcasion;
-
-            // Actualiza el tipoFiltro o tipoOcasion basado en la acción
-            if (action.type === FILTER_TIPO) {
-                nuevoTipoFiltro = action.payload;
-            } else if (action.type === FILTER_OCASION) {
-                nuevoTipoOcasion = action.payload;
-            }
-
-            // Aplica ambos filtros sobre catalogoFull
-            let catalogoFiltrado = catalogoFull.filter(item => {
-                const filtroTipo = nuevoTipoFiltro === 'Todos' || item.tipo === nuevoTipoFiltro;
-                const filtroOcasion = nuevoTipoOcasion === 'Todos' || item.ocasion === nuevoTipoOcasion;
-                return filtroTipo && filtroOcasion;
-            });
-
-            return {
-                ...state,
-                catalogoFiltrado,
-                tipoFiltro: nuevoTipoFiltro,
-                tipoOcasion: nuevoTipoOcasion,
-            };
-        }
+            case FILTER_TIPO:
+                case FILTER_OCASION: {
+                    // Extrae los valores actuales necesarios del estado
+                    const { catalogoFull, tipoFiltro, tipoOcasion } = state;
+                    let nuevoTipoFiltro = tipoFiltro;
+                    let nuevoTipoOcasion = tipoOcasion;
+                
+                    // Actualiza el tipoFiltro o tipoOcasion basado en la acción
+                    if (action.type === FILTER_TIPO) {
+                        nuevoTipoFiltro = action.payload;
+                    } else if (action.type === FILTER_OCASION) {
+                        nuevoTipoOcasion = action.payload;
+                        // Si se elige primero la ocasión, asegúrate de que el tipoFiltro no sea 'Todos'
+                        if (nuevoTipoOcasion !== 'Todos' && nuevoTipoFiltro === 'Todos') {
+                            nuevoTipoFiltro = catalogoFull.find(item => item.ocasion === nuevoTipoOcasion)?.tipo || 'Todos';
+                        }
+                    }
+                
+                    // Aplica ambos filtros sobre catalogoFull
+                    let catalogoFiltrado = catalogoFull.filter(item => {
+                        const filtroTipo = nuevoTipoFiltro === 'Todos' || item.tipo === nuevoTipoFiltro;
+                        const filtroOcasion = nuevoTipoOcasion === 'Todos' || item.ocasion === nuevoTipoOcasion;
+                        return filtroTipo && filtroOcasion;
+                    });
+                
+                    return {
+                        ...state,
+                        catalogoFiltrado,
+                        tipoFiltro: nuevoTipoFiltro,
+                        tipoOcasion: nuevoTipoOcasion,
+                    };
+                }
+                
 
         case SELECTED_MOD : {
             const { catalogoFull } = state;
