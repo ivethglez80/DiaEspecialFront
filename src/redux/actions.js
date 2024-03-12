@@ -4,6 +4,7 @@ export const GET_CATALOGO = "GET_CATALOGO"
 export const PUT_MODELO = "PUT_MODELO"
 export const POST_MODELO = "POST_MODELO"
 export const MODIFY_MODELO = "MODIFY_MODELO"
+export const DELETE_MODELO = "DELETE_MODELO" 
 
 export const FILTER_TIPO = "FILTER_TIPO"
 export const FILTER_OCASION = "FILTER_OCASION"
@@ -46,3 +47,31 @@ export const selectedMod = (id) => {
         payload: id
     }
 };
+
+export const deleteModelo = (id) => {
+    return async (dispatch) => {
+        try {
+            await axios.delete(catalogoURL, {data:{id}});
+            dispatch({
+                type: DELETE_MODELO,
+                payload: {id}
+            })
+        } catch (error) {
+            console.log(error);
+        }
+    }
+};
+
+export const postModelo = (payload) => {
+    return async (dispatch)=>{
+        try {
+            let createModelo = await axios.post(catalogoURL, payload);
+            return dispatch({
+                type: POST_MODELO,
+                payload: createModelo.data
+            })
+        } catch (error) {
+            console.log(error);
+        }
+    }
+}

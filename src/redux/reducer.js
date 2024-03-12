@@ -1,4 +1,4 @@
-import { GET_CATALOGO, FILTER_TIPO, FILTER_OCASION, SELECTED_MOD } from "./actions";
+import { GET_CATALOGO, FILTER_TIPO, FILTER_OCASION, SELECTED_MOD, DELETE_MODELO, POST_MODELO } from "./actions";
 
 const initialState = {
     catalogoFull: [],
@@ -62,6 +62,17 @@ const rootReducer = (state = initialState, action) => {
             }
         }
         }
+
+        case DELETE_MODELO:
+            return {
+                ...state,
+                catalogoFull : state.catalogoFull.filter(modelo => modelo.id !== action.payload.id)
+            };
+
+        case POST_MODELO:
+            return {
+                ...state,
+            };
 
         default:
             return state;

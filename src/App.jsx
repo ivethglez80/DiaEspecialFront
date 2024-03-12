@@ -5,7 +5,7 @@ import { Provider } from 'react-redux'
 import store from './redux/store'
 import './App.css'
 import DashLogin from './views/DashAdmin/dashLogin'
-import CatalogoRouter from './components/catalogoRouter'
+
 import CatalogoFull from './views/catalogo/catalogoFull'
 import Ordenar from './views/ordenar/ordenar'
 import DashAdmin from './views/DashAdmin/dashAdmin'

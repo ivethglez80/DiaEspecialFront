@@ -3,15 +3,15 @@ import mobileFrame from "./../../img/mobileFrame.png";
 import prueba from "./../../img/prueba.png";
 
 const ModeloCard = ({ id, imagen, nombre_modelo, ocasion, tipo, urlSample }) => {
-    // aqui funciones para botnos ver y ordenar
+    
 
     return (
         <>
         <div>
         <div className="relative w-[166px] h-[309px] rounded-3xl overflow-hidden flex justify-center">
         <img
-                src={urlSample ? urlSample : prueba}
-                alt={`modelo: ${nombre_modelo} ocasion:${ocasion} tipo:${tipo} url:${urlSample}`}
+                src={imagen ? imagen : prueba}
+                alt={`modelo: ${nombre_modelo} ocasion:${ocasion} tipo:${tipo} url:${imagen}`}
                 className="absolute w-[160px] h-[303px] bg-white"
             />
             <img src={mobileFrame} alt="mobile frame" className="top-0 left-0 absolute"/>            

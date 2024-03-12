@@ -35,7 +35,7 @@ const DashLogin = () => {
 
     return (
         <>
-        <div className="flex justify-center pt-40 bg-gray-600">
+        <div className="flex justify-center pt-40 bg-gray-600 h-screen">
         <div className="flex flex-col">
             <div className="pb-6">
                 <h1 className="font-fuente1 text-color1 text-2xl uppercase text-center">Ingresar a <br/> panel de control</h1>
@@ -49,7 +49,7 @@ const DashLogin = () => {
             <input type="text" value={password} onChange={(e)=> setPassword(e.target.value)} className="bg-color3 font-fuente1 text-color2 text-2xl"/>
             </div>
             <div className="flex justify-center">
-            <button onClick={handleDashLogin} className="btn-silver w-[100px] mt-8">DashLogin</button>
+            <button onClick={handleDashLogin} className="bg-white w-[100px] mt-8 hover:bg-gray-400 rounded-xl">Login</button>
             </div>
         </div>
         </div>
