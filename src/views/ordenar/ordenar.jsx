@@ -55,7 +55,7 @@ const Ordenar = () => {
                     <div className="static md:fixed pt-12">
                         <div className="relative w-[166px] h-[309px] rounded-3xl overflow-hidden flex justify-center">
                             <img
-                                src={modSeleccionado.urlSample ? modSeleccionado.urlSample : prueba}
+                                src={modSeleccionado.imagen ? modSeleccionado.imagen : prueba}
                                 alt={`modelo: ${modSeleccionado.nombre_modelo} ocasion:${modSeleccionado.ocasion} tipo:${modSeleccionado.tipo} url:${modSeleccionado.urlSample}`}
                                 className="absolute w-[160px] h-[303px] bg-white"
                             />

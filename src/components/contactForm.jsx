@@ -12,6 +12,9 @@ const ContactForm = () => {
     })
 
     const baseUrl = import.meta.env.VITE_BASE_URL || "http://localhost:3001"; // con vite
+    //const baseUrl = import.meta.env.VITE_SENDEMAIL_DEPLOY || "http://localhost:3001";
+    
+
 
     const sendEmail = async () => {
         let dataSend = {
@@ -22,7 +25,7 @@ const ContactForm = () => {
             consulta: state.consulta
         }
 
-        const res = await fetch(`${baseUrl}/sendEmail`,{
+        const res = await fetch(`${baseUrl}/send-email`,{
             method: "POST",
             body: JSON.stringify(dataSend),
             headers: {
@@ -87,7 +90,7 @@ const handleSubmit = async(e) => {
 
                 <div className="flex flex-col px-10 pt-2 md:px-0">
                     <label className="font-rasputin text-[#9D5A4D]">whatsapp</label>
-                    <input type="number" name="whatsapp" value={state.whatsapp} onChange={handleInput} className="rounded-sm shadow-md text-[#9D5A4D]"/>
+                    <input type="text" name="whatsapp" value={state.whatsapp} onChange={handleInput} className="rounded-sm shadow-md text-[#9D5A4D]"/>
                 </div>
 
                 <div className="flex flex-col px-10 pt-2 md:px-0">

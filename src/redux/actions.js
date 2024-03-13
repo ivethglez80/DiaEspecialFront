@@ -11,9 +11,9 @@ export const FILTER_OCASION = "FILTER_OCASION"
 export const SELECTED_MOD = "SELECTED_MOD"
 
 
-const catalogoURL =  import.meta.env.VITE_CATALOGO_URL || "http://localhost:3001/catalogo";
+//const catalogoURL =  import.meta.env.VITE_CATALOGO_URL || "http://localhost:3001/catalogo";
 
-//const catalogoURL = import.meta.env.VITE_CATALOGO_DEPLOY;
+const catalogoURL = import.meta.env.VITE_CATALOGO_DEPLOY;
 
 export const getCatalogo = () => {
     return async function (dispatch) {
