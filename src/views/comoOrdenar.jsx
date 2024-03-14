@@ -24,7 +24,7 @@ const ComoOrdenar = () =>{
                 <div className="w-2/3 mx-auto py-5 md:flex md:flex-col scale-100 hover:scale-105">
                     <img src={como1} alt="" />
                     <div className="bg-white px-2 pb-8 md:h-[160px]">
-                        <p className="font-rasputin text-marron text-lg text-center md:text-base">Elige el modelo que mas te guste de nuestro amplio catalogo.</p>
+                        <p className="font-rasputin text-marron text-lg text-center md:text-base">Elige tu modelo del catalogo o solicita un diseño personalizado.</p>
                     </div>
                     <div className="flex justify-center">
                     <TbSquareRoundedNumber1Filled className="text-marron text-4xl -translate-y-4"/>
@@ -45,9 +45,9 @@ const ComoOrdenar = () =>{
            
 
                 <div className="w-2/3 mx-auto py-5 md:flex md:flex-col scale-100 hover:scale-105">
-                    <img src={como3} alt="" />
+                    <img src={como4} alt="" />
                     <div className="bg-white px-2 pb-8 md:h-[160px]">
-                        <p className="font-rasputin text-marron text-lg text-center md:text-base">Comparte tu invitacion completamente personalizada y funcional por el medio que desees.</p>
+                        <p className="font-rasputin text-marron text-lg text-center md:text-base">En solo 3 dias para diseños de catalogo o 2 semanas para personalizados tendremos listo tu pedido</p>
                     </div>
                     <div className="flex justify-center">
                     <TbSquareRoundedNumber3Filled className="text-marron text-4xl -translate-y-4"/>
@@ -57,9 +57,9 @@ const ComoOrdenar = () =>{
 
             
                 <div className="w-2/3 mx-auto py-5 md:flex md:flex-col scale-100 hover:scale-105">
-                    <img src={como4} alt="" />
+                    <img src={como3} alt="" />
                     <div className="bg-white px-2 pb-8 md:h-[160px]">
-                        <p className="font-rasputin text-marron text-lg text-center md:text-base">Elige el modelo que mas te guste de nuestro amplio catalogo.</p>
+                        <p className="font-rasputin text-marron text-lg text-center md:text-base">Listo! Envia tu invitacion de forma facil e innovadora</p>
                     </div>
                     <div className="flex justify-center">
                     <TbSquareRoundedNumber4Filled className="text-marron text-4xl -translate-y-4"/>

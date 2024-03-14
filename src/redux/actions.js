@@ -14,6 +14,7 @@ export const SELECTED_MOD = "SELECTED_MOD"
 //const catalogoURL =  import.meta.env.VITE_CATALOGO_URL || "http://localhost:3001/catalogo";
 
 const catalogoURL = import.meta.env.VITE_CATALOGO_DEPLOY;
+console.log("este es catalogoURL", catalogoURL);
 
 export const getCatalogo = () => {
     return async function (dispatch) {

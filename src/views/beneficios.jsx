@@ -56,7 +56,7 @@ const Beneficios = () => {
                                     <IoStar className="text-marron hover:animate-spin"/>
                                     <h2 className="font-nowBold uppercase text-sm md:text-base text-marron">{benef.titulo}</h2>
                                 </div>
-                                <p className={`font-rasputin text-marron text-xs md:text-base ${showText === index ? "block" : "hidden"}`}>
+                                <p className={`font-rasputin text-marron text-xs md:text-base md:pl-2 ${showText === index ? "block" : "hidden"}`}>
                                     {benef.texto}
                                 </p>
                                 <button onClick={() => toggleText(index)} className="text-marron underline pt-2 md:pt-0 pl-6">
