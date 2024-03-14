@@ -21,9 +21,10 @@ export const getCatalogo = () => {
         try {
             const dbData = await axios.get(catalogoURL);
             const modelos = dbData.data;
-            dispatch({ type: GET_CATALOGO, payload: modelos});
+            dispatch({ type: GET_CATALOGO, payload: modelos });
         } catch (error) {
-            console.error(error);
+            console.error("Error al obtener el catálogo:", error);
+            // Puedes manejar el error de otra manera, por ejemplo, mostrando un mensaje de error al usuario.
         }
     }
 };
