@@ -21,11 +21,11 @@ const CardsContainer = () => {
 
     return (
         <>                    
-        <div className="pb-10 flex flex-row flex-wrap gap-10 justify-evenly">
+        <div className="pb-20 flex flex-row flex-wrap gap-10 justify-evenly">
                     {catalogoFiltrado.length>0?(catalogoFiltrado.map(({id, imagen, nombre_modelo, ocasion, tipo, urlSample}) => {
                         return (
                             <>                            
-                            <div>
+                            <div className=" md:mx-10 md:mb-20">
                             <ModeloCard 
                             id={id}
                             imagen={imagen}

@@ -17,7 +17,7 @@ const CatalogoFull = () =>{
                 <NavCatalogo />
                 </div>
 
-                <div className=" h-full overflow-y-auto relative flex justify-center bg-red-300">
+                <div className=" h-full overflow-y-auto relative flex justify-center">
                 <div className="sm:w-11/12">
                     <CardsContainer />
                 </div>
