@@ -9,12 +9,12 @@ const Config = {
     PriceGoldUSD: "$50.00 USD",
     PriceSilverUSD: "$40.00 USD",
     PriceBasicaUSD: "$10.00 ARS",
-    PricePersonalizadaUSD: "$90 USD",
+    PricePersonalizadaUSD: "basica $20USD || silver $99USD || gold $119USD",
 
     PriceGoldPromo: "$47,900.00 ARS",
     PriceSilverPromo: "$38,900.00 ARS",
     PriceBasicaPromo: "$8,500.00 ARS",
-    PricePersonalizadaPromo: "$74,900.00 ARS",
+    PricePersonalizadaPromo: "basica $12,000ARS || silver $89,000ARS || gold $99,000ARS",
 
     DiaEspecialMail: "diaEspecial@mail.com"
 }
