@@ -16,7 +16,10 @@ const Config = {
     PriceBasicaPromo: "$8,500.00 ARS",
     PricePersonalizadaPromo: "basica $12,000ARS || silver $89,000ARS || gold $99,000ARS",
 
-    DiaEspecialMail: "diaEspecial@mail.com"
+    DiaEspecialMail: "diaEspecial@mail.com",
+
+    mobile:"+5491134318192",
+    mensaje:"Hola!, Quiero ordenar mi invitacion!"
 }
 
 export default Config;

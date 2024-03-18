@@ -3,8 +3,9 @@ import ContactForm from "../components/contactForm";
 import { PiWhatsappLogoFill } from "react-icons/pi";
 import { TiSocialInstagram } from "react-icons/ti";
 import { MdEmail } from "react-icons/md";
-import divisor from "./../img/contactDiv.png"
-import divisorV from "./../img/contactDivV.png"
+import divisor from "./../img/contactDiv.png";
+import divisorV from "./../img/contactDivV.png";
+import Config from "./../data/config";
 
 
 const Contacto = () => {
@@ -20,10 +21,13 @@ const Contacto = () => {
                         <img src={divisorV} alt="" className="py-0 md:h-5/6 md:pt-16 hidden md:block" />
                     </div>
                     <div className="md:pt-24">
+
+                        <a href={`https://wa.me/${Config.mobile}?text=${encodeURIComponent(Config.mensaje)}`} target="_blank" rel="noopener noreferrer">
                         <div className="flex flex-row justify-center items-center pb-8 hover:scale-110">
                             <PiWhatsappLogoFill className="text-[#9D5A4D] text-4xl" />
                             <p className="font-rasputin text-[#9D5A4D] text-base md:text-xl">Envianos tu consulta.</p>
                         </div>
+                        </a>
 
                         <a href="https://www.instagram.com/invitaciones.diaespecial/" target="_blank">
                             <div className="flex flex-row justify-center items-center pb-8 hover:scale-110">
